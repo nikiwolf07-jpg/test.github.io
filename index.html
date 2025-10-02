@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mein Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGF 1 Signaling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 50px 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        nav {
+            margin: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .content {
+            display: none;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <h1>Hallo, ich bin Niki!</h1>
-  <p>Willkommen auf meiner Portfolio-Seite 🚀</p>
+
+<header>IGF 1 Signaling</header>
+
+<nav>
+    <button onclick="showContent('methods')">Methoden</button>
+    <button onclick="showContent('shop')">Shop</button>
+</nav>
+
+<div id="methods" class="content">
+    <h2>Methoden</h2>
+    <p>Hier könnte ein kurzer Testtext über Methoden stehen. Zum Beispiel: "Methode A ist super, Methode B ist auch interessant!"</p>
+</div>
+
+<div id="shop" class="content">
+    <h2>Shop</h2>
+    <p>Hier ist ein Testtext für den Shopbereich. Später kannst du Produkte, Preise und Buttons einfügen.</p>
+</div>
+
+<script>
+    function showContent(section) {
+        // Alle Inhalte ausblenden
+        document.querySelectorAll('.content').forEach(div => {
+            div.classList.remove('active');
+        });
+        // Den ausgewählten Inhalt anzeigen
+        document.getElementById(section).classList.add('active');
+    }
+</script>
+
 </body>
 </html>
+
+
